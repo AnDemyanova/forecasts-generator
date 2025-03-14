@@ -65,7 +65,7 @@ function makeForcastByTemplate(predictionText, probability) {
 
     const newForecast = forcastTemplate.content.cloneNode(true);
     newForecast.querySelector('h3').textContent = predictionText;
-    newForecast.querySelector('p').textContent = `Вероятность: + ${probability} + %`;
+    newForecast.querySelector('p').textContent = `Вероятность: ${probability} %`;
     return newForecast;
 
 

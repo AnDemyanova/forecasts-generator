@@ -55,7 +55,7 @@ forecastButton.addEventListener('click', function() {
     const probability = getRandom(0, 100);
 
     heading.textContent = predictionText;
-    paragraph.textContent = "Вероятность:" + probability + "%";
+    paragraph.textContent = `Вероятность: ${probability} %`;
 
     const myForecasts = makeForcastByTemplate(predictionText, probability);
     forecastContainer.prepend(myForecasts);
@@ -65,7 +65,7 @@ function makeForcastByTemplate(predictionText, probability) {
 
     const newForecast = forcastTemplate.content.cloneNode(true);
     newForecast.querySelector('h3').textContent = predictionText;
-    newForecast.querySelector('p').textContent = "Вероятность:" + probability + "%";
+    newForecast.querySelector('p').textContent = `Вероятность: + ${probability} + %`;
     return newForecast;
 
 

@@ -14,17 +14,17 @@
 
 /* Для добавления предсказания в список воспользуйся шаблоном forecast-item */
 
-function getRandom(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-}
 
-let forecastButton = document.querySelector('.forecast-btn');
+
+const forecastButton = document.querySelector('.forecast-btn');
 const heading = document.querySelector('.current-forecast h1');
 const paragraph = document.querySelector('.current-forecast p');
 const forecastContainer = document.querySelector('.forecasts');
 const forcastTemplate = document.getElementById('forecast-item');
 
-
+function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 
 forecastButton.addEventListener('click', function() {
